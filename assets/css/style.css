@@ -1,0 +1,303 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.btnGrabar{
+  display: inline-block;
+  background-color: #ff695f;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 12px  30px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  transition: all .3s;
+  border: none;
+}
+.miBtn{
+display: inline-block;
+background-color: #03a4ed;
+font-size: 15px;
+font-weight: 400;
+color: #fff;
+text-transform: capitalize;
+padding: 10px 30px;
+border-radius: 23px;
+letter-spacing: 0.25px;
+transition: all .3s;
+border: none;
+margin-bottom: 10px;
+}
+
+#duracion{
+text-align: center;
+color: #ff685f;
+font-weight: 800;
+background-color: #fff;
+padding: 10px 25px;
+line-height: 20px;
+font-weight: bold;
+border-radius: 5px;
+}
+/*
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+}*/
+
+img{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.contenedor{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.centradoMarco{
+   /* border: 1px solid yellow;*/
+    position: absolute;
+    /*top: 52%;*/
+    top: 687px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+  .centradoMarco img{
+      width: 465px;
+      height: 480px;
+    }
+.centradoVideo{
+    width:100%;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*border: 1px solid maroon;*/
+}
+  video{
+     width: 600px;
+     height:450px;
+  } 
+
+.centradoVideo img{
+  width: 340px;
+  height: 250px;
+}
+
+#contBtns{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: -100px;
+}
+
+@media (min-width: 280px) and (max-width: 300px) {
+    video{
+        width: 170px;
+        height: 210px;
+        /*border: 2px solid black;*/
+    }
+    .centradoVideo{
+        /*border: 2px solid maroon;*/
+        width: 60%;
+        height: 180px;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco{
+        /*border: 2px solid yellow;*/
+        margin-top: -435px;
+    }
+    .centradoMarco img {
+        width: 170px;
+        height: 165px;
+        /*border: 2px solid crimson;*/
+    }
+}
+
+@media (min-width: 301px) and (max-width: 320px) {
+    video{
+        width: 175px;
+        height: 200px;
+       /* border: 2px solid black;*/
+    }
+    .centradoVideo{
+        /*border: 2px solid maroon;*/
+        width: 60%;
+        height: 160px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco{
+       /* border: 2px solid yellow;*/
+        margin-top: -420px;
+    }
+    .centradoMarco img {
+        width: 170px;
+        height: 175px;
+       /* border: 2px solid crimson;*/
+    }
+}
+
+@media (min-width: 321px) and (max-width: 420px) {
+    video{
+        width: 210px;
+        height: 220px;
+        /*border: 2px solid black;*/
+    }
+    .centradoVideo{
+       /* border: 2px solid maroon;*/
+        width: 60%;
+        height: 180px;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco{
+        width: 60%;
+       /* border: 2px solid yellow;*/
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco img {
+        width: 230px;
+        height: 230px;
+       /* border: 2px solid crimson;*/
+    }
+}
+
+@media (min-width: 421px) and (max-width: 500px) {
+    video{
+        width: 210px;
+        height: 220px;
+        /*border: 2px solid black;*/
+    }
+    .centradoVideo{
+        /*border: 2px solid maroon;*/
+        width: 60%;
+        height: 180px;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco{
+        width: 60%;
+       /* border: 2px solid yellow;*/
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco img {
+        width: 280px;
+        height: 275px;
+       /* border: 2px solid crimson;*/
+    }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+    video{
+        width: 210px;
+        height: 220px;
+        /*border: 2px solid black;*/
+    }
+    .centradoVideo{
+       /* border: 2px solid maroon;*/
+        width: 60%;
+        height: 180px;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco{
+        width: 60%;
+        /*border: 2px solid yellow;*/
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco img {
+        width: 315px;
+        height: 300px;
+        /*border: 2px solid crimson;*/
+    }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+    video{
+        width: 210px;
+        height: 220px;
+    }
+    .centradoVideo{
+        width: 60%;
+        height: 180px;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco{
+        width: 60%;
+       /* border: 2px solid yellow;*/
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .centradoMarco img {
+        width: 315px;
+        height: 300px;
+        /*border: 2px solid crimson;*/
+    }
+    #contBtns{
+        width: 80%;
+        margin-left: 50px;
+    }
+}
+
+
+@media (min-width: 701px) and (max-width: 1900px) {
+ 
+    #contBtns{
+        margin-top: -250px;
+        width: 80%;
+        margin-left: 70px;
+        }
+}
+
+
+@media (min-width: 801px) and (max-width: 990px) {
+    #contBtns{
+        margin-top: -250px;
+        width: 80%;
+        margin-left: 70px;
+        }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    #contBtns{
+        margin-top: -250px;
+        width: 80%;
+        margin-left: 70px;
+        }
+}
+

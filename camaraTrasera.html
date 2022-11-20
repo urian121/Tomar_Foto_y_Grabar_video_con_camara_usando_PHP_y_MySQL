@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	<title>Tomar Foto & Grabar video con PHP</title>
+	<link type="text/css" rel="shortcut icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  
+	<div class="contenedor" id="contenedorPantalla">
+	    <select name="dispositivosDeAudio" id="dispositivosDeAudio" hidden></select>
+        <select name="dispositivosDeVideo" id="dispositivosDeVideo" hidden></select>
+              
+              
+        <select name="listaDeDispositivos" id="listaDeDispositivos" hidden></select>
+    
+        <video muted id="video" autoplay></video> 
+        <canvas id="canvas" style="display: none;"></canvas>
+	</div>
+
+<div id="contBtns">
+  <button id="boton" class="miBtn btnHover mb-3">
+    <i class="zmdi zmdi-camera-party-mode" style="color: #333;"></i> 
+    Tomar Foto
+  </button>
+    &nbsp;&nbsp;
+  <button id="btn-front" class="miBtn btnHover">Cámara Frontal</button>
+    &nbsp;&nbsp;
+    <button id="btnComenzarGrabacion" class="btnGrabar btnHover mb-3" style="background-color:#138496 !important;">
+        <i class="zmdi zmdi-videocam zmdi-hc-lg" style="color: #333;"></i> 
+        Grabar vídeo 
+     </button>
+    <button id="btnDetenerGrabacion" class="btnGrabar btnHover mb-3" style="background-color:#ff695f; display: none;">
+        <i class="zmdi zmdi-videocam-off" style="color: #333;"></i> 
+        Detener grabación
+    </button>
+    &nbsp;&nbsp;
+<br>
+<p id="duracion" style="display:none;"></p>
+<p id="estado"> </p>
+</div>
+
+
+<script  src="https://code.jquery.com/jquery-2.2.4.js"  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="./script-video-foto/VideoTras.js"></script> 
+<script src="./script-video-foto/CamaraTras.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
+<script>
+  const $boto = document.querySelector("#btnCapturar"), // El botón que desencadena
+        $statu = document.querySelector("#estado"),
+        $objetivo   = document.querySelector("#contenedorPantalla"); // A qué le tomamos la foto
+  
+const enviarCapturaAServidor = canvas => {
+
+  let imagenComoBase64 = canvas.toDataURL();
+  imagenComoBase64 = encodeURIComponent(imagenComoBase64);
+
+  const payload = {
+    "captura": imagenComoBase64
+  };
+  const ruta = "./static/guardarCapture.php";
+  fetch(ruta, {
+    method: "POST",
+    body: JSON.stringify(payload),
+    headers: {
+      "Content-type": "application/x-www-form-urlencoded",
+    }
+  })
+    .then(resultado => {
+        console.log('cargando');
+      return resultado.text()
+    })
+    .then(nombreDeLaFoto => {
+      //console.log({ nombreDeLaFoto });
+      //alert(`Guardada como ${nombreDeLaFoto}`);
+      location.href = `static/enviarFile.php?foto=${nombreDeLaFoto}`;
+      
+    });
+};
+
+
+
+//Trabajando con la camara Fron & Tras
+$("#btn-front").click(function(){
+         location.href = `./`;
+ });
+</script>
+
+</body>
+</html>
