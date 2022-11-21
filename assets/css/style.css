@@ -96,8 +96,6 @@ img{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
-    position: absolute;
-    margin-top: -100px;
 }
 
 @media (min-width: 280px) and (max-width: 300px) {
@@ -268,36 +266,5 @@ img{
         height: 300px;
         /*border: 2px solid crimson;*/
     }
-    #contBtns{
-        width: 80%;
-        margin-left: 50px;
-    }
-}
-
-
-@media (min-width: 701px) and (max-width: 1900px) {
- 
-    #contBtns{
-        margin-top: -250px;
-        width: 80%;
-        margin-left: 70px;
-        }
-}
-
-
-@media (min-width: 801px) and (max-width: 990px) {
-    #contBtns{
-        margin-top: -250px;
-        width: 80%;
-        margin-left: 70px;
-        }
-}
-
-@media (min-width: 991px) and (max-width: 1200px) {
-    #contBtns{
-        margin-top: -250px;
-        width: 80%;
-        margin-left: 70px;
-        }
 }
 
