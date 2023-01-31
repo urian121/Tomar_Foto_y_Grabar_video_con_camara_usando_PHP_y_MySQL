@@ -77,8 +77,6 @@ Html {
 <body>
 
 
-<body>
-
 <div id="cont">
   <a href="index.html">< VOLVER </a>
 </div>
