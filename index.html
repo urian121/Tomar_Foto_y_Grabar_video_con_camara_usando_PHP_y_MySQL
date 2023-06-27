@@ -79,9 +79,7 @@ const enviarCapturaAServidor = canvas => {
     })
     .then(nombreDeLaFoto => {
       console.log({ nombreDeLaFoto });
-      alert(`Guardada como ${nombreDeLaFoto}`);
-      location.href = `static/enviarFile.php?foto=${nombreDeLaFoto}`;
-      
+      alert(`Guardada como ${nombreDeLaFoto}`);      
     });
 };
 
